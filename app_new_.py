@@ -37,7 +37,7 @@ def main():
         <style>
             .header {
                 position: relative;
-                height: 500px;
+                height: 600px;
                 background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://plus.unsplash.com/premium_photo-1675324517011-24d2c741c22f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
                 background-size: cover;
                 background-position: center;
@@ -69,7 +69,7 @@ def main():
             
             .line-container {
                 position: absolute;
-                top: 50%;
+                top: 40%;
                 left: 0;
                 width: 100%;
                 height: 2px;
@@ -113,14 +113,15 @@ def main():
             <h1>House Price Prediction App</h1>
             <p>Predict the price of houses based on their features</p>
             <p>This app helps buyers and sellers to estimate the value of properties</p>
-            <p>Welcome to our app! Visit our <a href="https://example.com" target="_blank">website</a>.</p>
+            <p>Welcome to our app! </p>
             <p>Scroll down to predict house price</p>
         </div>
         """
     , unsafe_allow_html=True)
 
     # Main App Section
-    st.markdown("<h2 class='main-section'>House Features</h2>", unsafe_allow_html=True)
+    st.markdown( """ <style> .main-section { padding: 20px;text-align:center } </style>"""
+        "<h2 class='main-section'>House Features</h2>", unsafe_allow_html=True)
 
     left, right = st.columns((2,2))
     total_bedrooms = left.number_input('BHK',
